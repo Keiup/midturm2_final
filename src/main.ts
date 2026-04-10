@@ -18,7 +18,10 @@ async function main() {
   let currentFile = "teapot.obj";
 
   async function loadModel(filename: string) {
-    const res  = await fetch("/" + filename);
+    //const res  = await fetch('/'+filename);
+    //const res = await fetch(new URL(filename, import.meta.url).href);
+    const res = await fetch(import.meta.env.BASE_URL + filename);
+    fetch(import.meta.env.BASE_URL + filename)
     const text = await res.text();
     return loadOBJ(text);
   }

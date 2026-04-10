@@ -1,6 +1,6 @@
 import type { Mesh } from "./objLoader";
 import { Camera } from "./camera";
-import { vec3, transformVec3, transformDir } from "./math";
+import { vec3, transformVec3} from "./math";
 import type { Vec3 } from "./math";
 import { Arcball } from "./arcball";
 
